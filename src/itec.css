@@ -289,16 +289,16 @@
      display: grid;
      place-items: center;
      border-radius: 50%;
-     background: var(--gold);
+     background: #25D366;
      box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
-     color: var(--black);
+     color: white;
      text-decoration: none;
  }
 
  .whatsapp svg {
      width: 24px;
      height: 24px;
-     color: var(--black);
+     color: white;
  }
 
  @media (min-width: 900px) {
@@ -796,8 +796,8 @@
      display: grid;
      place-items: center;
      border-radius: 50%;
-     background: var(--gold);
-     color: var(--black);
+     background: #25D366;
+     color: white;
      text-decoration: none;
      box-shadow: 0 5px 18px #0008;
      transition: transform 0.3s;
@@ -1402,7 +1402,8 @@
 .itec-social { display:flex; gap:16px; margin-top:28px; }
 .itec-social a { color:#111; }
 .itec-site-footer { margin-top:60px; border-top:4px solid var(--gold); padding-top:28px; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; }
-.itec-footer-logo { color:var(--gold); font-weight:700; font-size:24px; letter-spacing:1px; }
+.itec-footer-logo { display:flex; align-items:center; flex:0 0 auto; }
+.itec-footer-logo img { display:block; width:144px; height:144px; object-fit:contain; }
 .itec-site-footer nav { display:flex; gap:0; }
 .itec-site-footer nav a { color:#e8e5e0; text-decoration:none; font-size:12px; padding:0 12px; border-left:1px solid #555; }
 .itec-site-footer nav a:first-child { border-left:0; }

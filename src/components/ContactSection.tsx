@@ -77,7 +77,9 @@ export function ContactSection() {
       </div>
 
       <div className="itec-site-footer">
-        <div className="itec-footer-logo">ITEC<span>•</span>LTD</div>
+        <a className="itec-footer-logo" href="#home" aria-label="ITEC LTD Home">
+          <img src="/logo.jpeg" alt="ITEC LTD" />
+        </a>
         <nav>
           <a href="#home">HOME</a><a href="#about">ABOUT</a><a href="#services">SERVICES</a><a href="#gallery">GALLERY</a><a className="active" href="#contact">CONTACT</a>
         </nav>
