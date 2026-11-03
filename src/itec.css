@@ -177,8 +177,12 @@
      max-width: 470px;
  }
 
+ .hero h1 {
+     font-size: clamp(48px, 7vw, 72px);
+ }
+
  .hero-subtitle {
-     font-size: 10px;
+     font-size: 11px;
      letter-spacing: 1.65px;
      margin: 13px 0 0 2px;
      color: #dedbd7;
@@ -192,7 +196,7 @@
      margin: 58px 0 0 2px;
      text-decoration: none;
      color: #f4f1ed;
-     font-size: 9px;
+     font-size: 10px;
      font-weight: 700;
      letter-spacing: 1px;
  }
@@ -332,6 +336,7 @@
      }
 
      .hero-content {
+         width: min(70%, 700px);
          padding: 65px 0 0 5vw;
      }
 
@@ -345,13 +350,17 @@
          font-size: clamp(54px, 5.7vw, 78px);
      }
 
+     .hero h1 {
+         font-size: clamp(70px, 7vw, 100px);
+     }
+
      .hero-subtitle {
-         font-size: 12px;
+         font-size: 13px;
      }
 
      .hero-link {
          margin-top: 70px;
-         font-size: 11px;
+         font-size: 12px;
      }
 
      .story {
@@ -439,14 +448,19 @@
          font-size: clamp(37px, 10vw, 48px);
      }
 
+     .hero h1 {
+         font-size: clamp(48px, 12vw, 62px);
+     }
+
      .hero-subtitle {
-         font-size: 8px;
+         font-size: 9px;
          letter-spacing: 1.2px;
          white-space: normal;
      }
 
      .hero-link {
-         margin-top: 48px;
+         margin-top: 35px;
+         font-size: 10px;
      }
 
      .story {

@@ -55,9 +55,7 @@ function Index() {
           <div className="hero-content">
             <div className="gold-line"></div>
             <h1>
-              International Trade.
-              <br />
-              Global Connections.
+              Trade<br/> Beyond<br/> Boundaries.
             </h1>
             <p className="hero-subtitle">INTERNATIONAL TRADING &amp; EXPORT COMPANY</p>
             <a className="hero-link" href="#about">
@@ -75,10 +73,9 @@ function Index() {
             />
           </div>
           <div className="story-copy">
-            <div className="eyebrow">OUR STORY</div>
+            <div className="eyebrow">OUR STORY</div>c  
             <h2>
-              ITEC LTD
-              <br />
+              
               International Trade.
               <br />
               Global Connections.
