@@ -66,7 +66,7 @@ export function ContactSection() {
             <h4>Website</h4>
             <p>www.itec.llc</p>
             <div className="itec-social">
-              <a href="#" aria-label="Instagram"><Instagram size={20} /></a>
+              <a href="https://instagram.com/itec.ltd?srtk=anphazZyY2t5eXNv&utm_source=qr" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><Instagram size={20} /></a>
               <a href="https://www.linkedin.com/company/knp-global-traders/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><Linkedin size={20} /></a>
               <a href="#" aria-label="X">
                 <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M18.2 2H21l-6.5 7.4L22 22h-6l-4.7-6.2L5.8 22H3l7-8L2 2h6.1l4.3 5.7L18.2 2Zm-1 18h1.7L7 3.8H5.2L17.2 20Z" /></svg>

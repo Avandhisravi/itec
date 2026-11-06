@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type { CSSProperties } from "react";
+import { FileText } from "lucide-react";
 import ship from "@/assets/ship.jpg";
 import { ContactSection } from "@/components/ContactSection";
 import gShip from "@/assets/g-ship.jpg";
@@ -73,7 +74,7 @@ function Index() {
             />
           </div>
           <div className="story-copy">
-            <div className="eyebrow">OUR STORY</div>c  
+            <div className="eyebrow">OUR STORY</div>
             <h2>
               
               International Trade.
@@ -86,7 +87,15 @@ function Index() {
 We connect suppliers, manufacturers and buyers across international markets, helping businesses move goods efficiently and reliably from source to destination. From identifying the right sourcing opportunities to coordinating shipments and managing cross-border trade requirements, we work to make every stage of the process seamless. With a strong focus on reliability, clear communication and lasting business relationships, we help simplify global trade and create connections that move businesses forward.
 
             </p>
-           
+            <a
+              className="company-profile-link"
+              href="/company.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FileText size={18} aria-hidden="true" />
+              <span>VIEW COMPANY PROFILE</span>
+            </a>
           </div>
         </section>
 
@@ -135,19 +144,19 @@ We connect suppliers, manufacturers and buyers across international markets, hel
 
           <section className="story">
             <div>
-              <div className="eyebrow">OUR STORY</div>
+              
               <h2>
                 BUILT ON TRUST.
                 <br />
                 DRIVEN BY GLOBAL VISION.
               </h2>
               <p>
-                ITEC LTD connects businesses and markets through international import, <br/>
-                export and trading, helping move merchandise reliably across borders. <br/>
-                We work to create seamless trade connections by bringing together suppliers, <br/>
-                buyers and business partners from different parts of the world. With a focus <br/>
-                on reliability, efficiency and long-term relationship.Through our commitment<br/>
-                to trust, quality and professional service, we strive to build lasting <br/>
+                ITEC LTD connects businesses and markets through international import,
+                export and trading, helping move merchandise reliably across borders.
+                We work to create seamless trade connections by bringing together suppliers,
+                buyers and business partners from different parts of the world. With a focus
+                on reliability, efficiency and long-term relationship. Through our commitment
+                to trust, quality and professional service, we strive to build lasting
                 partnerships and create opportunities for businesses to grow beyond boundaries.
               </p>
             </div>
@@ -250,18 +259,8 @@ We connect suppliers, manufacturers and buyers across international markets, hel
         rel="noopener"
         aria-label="Chat with ITEC LTD on WhatsApp"
       >
-        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
-          <path
-            d="M16 3.5A12 12 0 0 0 5.7 21.6L4 28l6.6-1.7A12 12 0 1 0 16 3.5Z"
-            stroke="white"
-            strokeWidth="1.8"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M12.1 10.2c-.4-.8-.8-.8-1.2-.8h-.9c-.3 0-.8.1-1.2.6-.4.5-1.5 1.5-1.5 3.7s1.5 4.3 1.7 4.6c.2.3 2.9 4.6 7.1 6.2 3.5 1.4 4.2 1.1 5 .9.8-.1 2.6-1.1 3-2.1.4-1 .4-1.9.3-2.1-.1-.2-.4-.3-.9-.6-.5-.2-2.6-1.3-3-1.4-.4-.1-.7-.2-1 .3-.3.5-1.1 1.4-1.4 1.7-.3.3-.5.4-1 .1-.5-.2-1.9-.7-3.6-2.2-1.3-1.1-2.2-2.5-2.5-2.9-.3-.5 0-.7.2-.9.2-.2.5-.6.7-.8.2-.3.3-.5.5-.8.2-.3.1-.6 0-.8-.1-.2-1-2.4-1.4-3.2Z"
-            fill="white"
-            transform="translate(2 -1) scale(.83)"
-          />
+        <svg viewBox="0 0 24 24" fill="white" aria-hidden="true">
+          <path d="M20.52 3.48A11.87 11.87 0 0 0 12.05 0C5.48 0 .14 5.34.14 11.91c0 2.1.55 4.16 1.59 5.97L.05 24l6.27-1.65a11.9 11.9 0 0 0 5.72 1.46h.01c6.57 0 11.91-5.34 11.91-11.91 0-3.18-1.24-6.18-3.44-8.42ZM12.05 21.8h-.01a9.9 9.9 0 0 1-5.05-1.39l-.36-.21-3.72.98.99-3.63-.24-.37a9.87 9.87 0 0 1-1.52-5.27c0-5.47 4.45-9.92 9.92-9.92a9.86 9.86 0 0 1 7.02 2.91 9.87 9.87 0 0 1 2.9 7.02c0 5.47-4.45 9.92-9.93 9.92Zm5.45-7.43c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.91-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.49 1.07 2.89 1.22 3.09c.15.2 2.1 3.21 5.09 4.5.71.31 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35Z" />
         </svg>
       </a>
     </>
