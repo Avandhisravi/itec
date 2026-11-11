@@ -56,7 +56,7 @@ function Index() {
           <div className="hero-content">
             <div className="gold-line"></div>
             <h1>
-              Trade<br/> Beyond<br/> Boundaries.
+              Trade<br /> Beyond<br /> Boundaries.
             </h1>
             <p className="hero-subtitle">INTERNATIONAL TRADING &amp; EXPORT COMPANY</p>
             <a className="hero-link" href="#about">
@@ -76,7 +76,7 @@ function Index() {
           <div className="story-copy">
             <div className="eyebrow">OUR STORY</div>
             <h2>
-              
+
               International Trade.
               <br />
               Global Connections.
@@ -84,7 +84,7 @@ function Index() {
             <p>
               Your trusted partner for international sourcing, import and export, freight forwarding and end-to-end trade coordination.
 
-We connect suppliers, manufacturers and buyers across international markets, helping businesses move goods efficiently and reliably from source to destination. From identifying the right sourcing opportunities to coordinating shipments and managing cross-border trade requirements, we work to make every stage of the process seamless. With a strong focus on reliability, clear communication and lasting business relationships, we help simplify global trade and create connections that move businesses forward.
+              We connect suppliers, manufacturers and buyers across international markets, helping businesses move goods efficiently and reliably from source to destination. From identifying the right sourcing opportunities to coordinating shipments and managing cross-border trade requirements, we work to make every stage of the process seamless. With a strong focus on reliability, clear communication and lasting business relationships, we help simplify global trade and create connections that move businesses forward.
 
             </p>
             <a
@@ -109,7 +109,7 @@ We connect suppliers, manufacturers and buyers across international markets, hel
             [
               "WHAT WE DO",
               "Sourcing, trade and freight under one roof.",
-              "Product sourcing, import and export, freight forwarding and end-to-end trade coordination — booked, checked and tracked by one team.",
+              "Product sourcing, import and export, freight forwarding and end-to-end trade coordination booked, checked and tracked by one team.",
             ],
             [
               "HOW WE WORK",
@@ -137,14 +137,14 @@ We connect suppliers, manufacturers and buyers across international markets, hel
 
           <div className="hero-image">
             <img
-              src="/aboutt.jpeg"
+              src="/abouttt.jpeg"
               alt="Shipping containers at a cargo port"
             />
           </div>
 
           <section className="story">
             <div>
-              
+
               <h2>
                 BUILT ON TRUST.
                 <br />
@@ -172,21 +172,21 @@ We connect suppliers, manufacturers and buyers across international markets, hel
             <div className="pillar">
               <h3>MISSION</h3>
               <p>Connecting businesses, products and markets through global trade. Building trust across borders.
-</p>
+              </p>
             </div>
-             <div className="pillar">
+            <div className="pillar">
               <h3>VALUES</h3>
               <ul className="values">
                 <p>Integrity through honest trade. Reliability through consistent service. Global connections that bring markets closer. Long-term partnerships built on trust.
-</p>
+                </p>
               </ul>
             </div>
             <div className="pillar">
               <h3>VISION</h3>
               <p>Building lasting global connections through trusted trade. Strengthening partnerships across borders.
-</p>
+              </p>
             </div>
-           
+
           </section>
 
           <footer>
