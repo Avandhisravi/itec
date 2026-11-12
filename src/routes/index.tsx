@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import type { CSSProperties } from "react";
-import { FileText } from "lucide-react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
+import { FileText, Menu, X } from "lucide-react";
 import ship from "@/assets/ship.jpg";
 import { ContactSection } from "@/components/ContactSection";
 import gShip from "@/assets/g-ship.jpg";
@@ -31,6 +31,54 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  const galleryRef = useRef<HTMLDivElement>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const gallery = galleryRef.current;
+    if (!gallery) return;
+
+    const mobileQuery = window.matchMedia("(max-width: 750px)");
+    const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let intervalId: number | undefined;
+
+    const advanceSlide = () => {
+      const slides = Array.from(gallery.children).filter((child) =>
+        child.querySelector("img"),
+      );
+      if (slides.length < 2) return;
+
+      const slideWidth = slides[0].getBoundingClientRect().width;
+      const gap = Number.parseFloat(window.getComputedStyle(gallery).columnGap) || 0;
+      const maxScrollLeft = gallery.scrollWidth - gallery.clientWidth;
+      const nextScrollLeft =
+        gallery.scrollLeft >= maxScrollLeft - 1
+          ? 0
+          : Math.min(gallery.scrollLeft + slideWidth + gap, maxScrollLeft);
+
+      gallery.scrollTo({ left: nextScrollLeft, behavior: "smooth" });
+    };
+
+    const updateAutoplay = () => {
+      if (intervalId !== undefined) window.clearInterval(intervalId);
+      intervalId = undefined;
+
+      if (mobileQuery.matches && !reducedMotionQuery.matches) {
+        intervalId = window.setInterval(advanceSlide, 3500);
+      }
+    };
+
+    updateAutoplay();
+    mobileQuery.addEventListener("change", updateAutoplay);
+    reducedMotionQuery.addEventListener("change", updateAutoplay);
+
+    return () => {
+      if (intervalId !== undefined) window.clearInterval(intervalId);
+      mobileQuery.removeEventListener("change", updateAutoplay);
+      reducedMotionQuery.removeEventListener("change", updateAutoplay);
+    };
+  }, []);
+
   return (
     <>
       <header className="site-header">
@@ -44,6 +92,25 @@ function Index() {
           <a href="#gallery">GALLERY</a>
           <a href="#contact">CONTACT</a>
         </nav>
+        <button
+          className="mobile-menu-toggle"
+          type="button"
+          aria-label={isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobile-nav"
+          onClick={() => setIsMobileMenuOpen((isOpen) => !isOpen)}
+        >
+          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+        {isMobileMenuOpen && (
+          <nav className="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+            <a href="#home" onClick={() => setIsMobileMenuOpen(false)}>HOME</a>
+            <a href="#about" onClick={() => setIsMobileMenuOpen(false)}>ABOUT</a>
+            <a href="#services" onClick={() => setIsMobileMenuOpen(false)}>SERVICES</a>
+            <a href="#gallery" onClick={() => setIsMobileMenuOpen(false)}>GALLERY</a>
+            <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>CONTACT</a>
+          </nav>
+        )}
       </header>
 
       <main>
@@ -176,8 +243,10 @@ function Index() {
             <div className="pillar">
               <h3>VALUES</h3>
               <ul className="values">
-                <p>Integrity through honest trade. Reliability through consistent service. Global connections that bring markets closer. Long-term partnerships built on trust.
-                </p>
+                <li>Integrity through honest trade.</li>
+                <li>Reliability through consistent service.</li>
+                <li>Global connections that bring markets closer.</li>
+                <li>Long-term partnerships built on trust.</li>
               </ul>
             </div>
             <div className="pillar">
@@ -231,7 +300,13 @@ function Index() {
             <h1>THE WORLD<br />IN MOTION.</h1>
             <p>A visual look at the movement behind international trade.</p>
           </div>
-          <div className="itec-gallery-grid">
+          <div
+            className="itec-gallery-grid"
+            ref={galleryRef}
+            role="region"
+            aria-label="Gallery images. Swipe horizontally to view more. Slides automatically on mobile."
+            tabIndex={0}
+          >
             <div className="g-ship"><img src={gShip} loading="lazy" alt="Container ship crossing the ocean at sunset" /></div>
             <div className="g-tag g-tag-1">Global<br />Shipping</div>
             <div className="g-port">
