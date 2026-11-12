@@ -43,7 +43,6 @@ function Index() {
           <a href="#services">SERVICES</a>
           <a href="#gallery">GALLERY</a>
           <a href="#contact">CONTACT</a>
-          <span className="search-icon" aria-label="Search"></span>
         </nav>
       </header>
 
